@@ -1,5 +1,6 @@
 html, body {
   margin: 0;
   padding: 0;
-  background: fixed cover url("img/inajaran-falls-scenery-in-guam.jpg");
+  background: url("img/inajaran-falls-scenery-in-guam.jpg");
+  background-size: cover;
 }
