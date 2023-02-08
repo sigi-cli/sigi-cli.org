@@ -11,3 +11,22 @@ body {
   font-family: 'VL-Gothic', monospace;
 }
 
+#blurback, #solidback {
+  margin: 0 auto;
+}
+
+#blurback {
+  backdrop-filter: blur(4px);
+  max-width: 110ch;
+}
+
+#solidback {
+  max-width: 80ch;
+  padding: 1ch 4ch;
+  background-color: #464d;
+}
+
+hr {
+  border: 1px solid #222;
+}
+
