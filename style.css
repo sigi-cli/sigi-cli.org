@@ -6,10 +6,10 @@
 body {
   margin: 0;
   padding: 0;
-  background: url("img/inajaran-falls-scenery-in-guam.jpg");
+  background: fixed url("img/inajaran-falls-scenery-in-guam.jpg");
   background-size: cover;
   font-family: 'VL-Gothic', monospace;
-  color: #001;
+  color: black;
 }
 
 #blurback, #solidback {
@@ -22,8 +22,8 @@ body {
 }
 
 #solidback {
-  max-width: 70ch;
-  padding: 1ch 4ch;
+  max-width: 60ch;
+  padding: 1ch 8ch;
   background-color: #464d;
 }
 
@@ -42,5 +42,9 @@ pre {
   padding: 4ch;
   margin: 1ch 8ch;
   color: #ddf;
+}
+
+a {
+  color: #121;
 }
 
