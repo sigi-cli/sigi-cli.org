@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
   <head>
-    <title>Sigi 🌴</title>
+    <title>sigi 🌴</title>
     <meta charset='utf-8'/>
     <link rel='stylesheet' href='style.css'>
   </head>
@@ -9,15 +9,137 @@
     <div id="blurback"><div id="solidback">
 
       <header>
-        <h1>Sigi 🌴</h1>
-        <i>sigi (Chamorro) -- verb. To keep on, continue, advance</i>
-        <p>An organizing tool for terminal lovers who hate organizing.</p>
+        <h1>sigi 🌴</h1>
+        <i><b>sigi</b> (Chamorro) -- verb. To keep on, continue, advance</i>
       </header>
 
       <hr>
 
       <main>
-        <p>TODO</p>
+        <ul>
+          <li><a href="#the-big-idea">The Big Idea</a></li>
+        </ul>
+
+        <h2 id="the-big-idea">The Big Idea</h2>
+        <p>
+          <b>sigi</b> is an organizing tool for terminal lovers who hate
+          organizing.
+        </p>
+        <p>
+          Use <b>sigi</b> as extra memory. Use it to toss your tasks, groceries,
+          or the next board games you want to play onto a "stack." Shell aliases
+          are encouraged to organize your various stacks.
+        </p>
+        <p>
+          The original idea from <a href="https://so.dang.cool">J.R. Hill</a>:
+        </p>
+        <p class='quotation'>
+          I hope <b>sigi</b> will help you to get on with your life, by helping
+          you prioritize better, forget less, get some stuff done, and relax. 🌴
+          <br><br>
+          There's <a href="https://wiki.c2.com/?SevenPlusOrMinusTwo">a limit to
+          human memory</a>, and remembering things uses up
+          <a href="https://www.penguinrandomhouse.com/books/307740/willpower-by-roy-f-baumeister-and-john-tierney/">willpower</a>.
+          I like working at a command line, and wanted a tool to free me up from
+          trying to juggle tasks and ideas.
+          <br><br>
+          On a more personal level, while I love beauty and craftsmanship and
+          accomplishing things... I absolutely despise spending time organizing.
+          A five factor personality evaluation rated me at 7% in the orderliness
+          aspect of <a href="https://en.wikipedia.org/wiki/Conscientiousness">
+          conscientousness</a>, which (among other things) means I am both less
+          disturbed by chaos and more disturbed by order than 92% of humankind.
+          <br><br>
+          <b>sigi</b> intends to be far more flexible and messy, and far less
+          rigid and tidy, when compared to the plethora of personal and
+          professional organizational tools that exist. It will let you write
+          stuff down and look at that stuff when you want to. It's less like a
+          Google/Outlook/Apple Calendar application and more like a
+          pen-and-paper notebook.
+          <br><br>
+          I also just find that stacks, and stack-based languages like Forth
+          and Factor are a joy to play with. Also, they're a good fit for
+          organization. Usually older things that aren't "done" or "deletable"
+          are things that can wait more than whatever things are actively
+          being juggled.
+        </p>
+
+        <hr>
+
+        <h1 id="examples">Examples</h1>
+        <h2 id="examples_todolist"><b>sigi</b> as a to-do list</h2>
+
+        <p>
+          <b>sigi</b> can understand the subcommands <b>do</b> (add something)
+          and <b>done</b> (mark the current something completed).
+        </p>
+        <pre>
+$ alias todo='sigi --stack todo'
+
+$ todo do Write some code
+Creating: Write some code
+
+$ todo do Get a drink
+Creating: Get a drink
+
+$ todo do Take a nap
+Creating: Take a nap
+
+$ todo list
+Now: Take a nap
+  1: Get a drink
+  2: Write some code
+
+$ sleep 20m
+
+$ todo done
+Completed: Take a nap
+        </pre>
+          <p>
+            It's best to use <b>sigi</b> behind a few saved aliases with
+            unique "stacks". These stacks do not get shared. You should save
+            these aliases in your <b>~/.bashrc</b> or <b>~/.zshrc</b> or
+            whatever your shell uses for aliases or abbreviations. <b>sigi</b>
+            accepts a <b>--stack</b> option, and you can have as many stacks
+            as you can think of names.
+          </p>
+          <p>
+              Forgot what to do next?
+            </p>
+            <pre>
+$ todo
+Now: Get a drink
+
+Not going to do it?
+
+$ todo delete
+Deleted: Get a drink
+            </pre>
+
+        <h2 id="examples_anylist"><b>sigi</b> as a to-do list</h2>
+        <p>
+          <b>sigi</b> can also serve as a save-anything list.
+        </p>
+        <p>
+          Extending the alias idea, you can use sigi to store anything you want
+          to remember later.
+        </p>
+        <pre>
+$ alias watch-later='sigi --stack watch-later'
+
+$ watch-later add One Punch Man
+Creating: One Punch Man
+
+$ alias story-ideas='sigi --stack=story-ideas'
+
+$ story-ideas add Alien race lives backwards through time.
+Creating: Alien race lives backwards through time.
+        </pre>
+
+        <hr>
+
+        TODO: Finish me up
+
       </main>
 
     </div></div>
