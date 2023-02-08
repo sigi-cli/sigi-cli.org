@@ -1,3 +1,8 @@
+@font-face {
+  font-family: 'VL-Gothic';
+  src: url('/fonts/VL-Gothic-Regular.woff');
+}
+
 body {
   margin: 0;
   padding: 0;
