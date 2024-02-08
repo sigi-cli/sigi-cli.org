@@ -48,3 +48,11 @@ a {
   color: #121;
 }
 
+table#icons {
+  border: none;
+  float: right;
+}
+
+table#icons img {
+  height: 2em;
+}
